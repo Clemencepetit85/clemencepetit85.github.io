@@ -1,0 +1,95 @@
+
+body {
+    background-color: #f6e6d1;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Hauteur à 100% de la hauteur de l'écran */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+/* Styles pour les éléments à l'intérieur du body */
+h1, h2, p {
+    text-align: center; /* Centrer le texte */
+}
+
+img {
+    display: block; /* Rendre l'image un élément block pour utiliser margin auto */
+    margin: 0 auto; /* Centrer horizontalement */
+}
+
+
+@font-face {
+    font-family: 'Classyvogueregular';
+    src: url('QUETE1/Classyvogueregular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('QUETE1/Roboto-Medium.ttf') format('ttf');
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #de7471;
+    font-family: 'Classyvogueregular', sans-serif; /* Utilisation de Classyvogueregular pour les titres h1 */
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Roboto-Medium', sans-serif; /* Utilisation de Roboto-Medium pour les paragraphes */
+}
+
+body {
+    background-color: #f6e6d1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.number {
+    display: flex;
+    justify-content: space-around
+}
+
+@media (max-width: 767px) {
+    .number {
+        flex-direction:column
+    }
+}
+
+.number__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+@media (max-width: 767px) {
+    .number__wrapper:not(:last-child) {
+        margin-bottom:calc(var(--spacer_lg) + var(--spacer_xxxxs))
+    }
+}
+
+.number__wrapper>div {
+    background-color: var(--secondary_color);
+    border-radius: 50px;
+    color: var(--primary_color);
+    font-size: 48px;
+    font-weight: var(--font_weight_extra_bold);
+    margin-bottom: var(--spacer_xxs);
+    min-width: 20rem;
+    padding: var(--spacer_xxs) var(--spacer_md);
+    text-align: center
+}
+
+.number__wrapper>div>span {
+    color: var(--white_color);
+    font-size: 28px
+}
+
+.number__wrapper>p {
+    margin-bottom: 0
+}
